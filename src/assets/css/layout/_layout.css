@@ -1,0 +1,39 @@
+ul.side-nav.leftside-navigation li.user-details {
+    margin-bottom: 0;
+}
+
+#login-page {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0 2.5rem;
+    background: url(../../images/bg.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+#login-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .65);
+    filter: blur(100px);
+    z-index: var(--z-normal);
+}
+
+#login-page .card-panel {
+    position: relative;
+    background: var(--white-color);
+    width: max-content;
+    border: 1px solid var(--border-color);
+    box-shadow: none;
+    margin: 0;
+    z-index: var(--z-tooltip);
+}
