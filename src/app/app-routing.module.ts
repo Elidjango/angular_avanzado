@@ -9,6 +9,7 @@ import { AuthRoutingModule } from './auth/auth.routing';
 import { LayoutRoutingModule } from './pages/layout.routing';
 
 const routes: Routes = [
+  {path: "", pathMatch: "full", redirectTo: "/dashboard"},
   {path: "**", component: E404Component}
 ];
 
