@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 // - Components
 import { LayoutComponent } from './layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProgressbarComponent } from './progressbar/progressbar.component';
 
 // - M_Shared
 import { SharedModule } from "../shared/shared.module";
@@ -12,7 +13,8 @@ import { SharedModule } from "../shared/shared.module";
 @NgModule({
   declarations: [
     LayoutComponent,
-    DashboardComponent
+    DashboardComponent,
+    ProgressbarComponent
   ],
   exports: [
     LayoutComponent,

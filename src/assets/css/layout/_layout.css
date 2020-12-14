@@ -37,3 +37,21 @@ ul.side-nav.leftside-navigation li.user-details {
     margin: 0;
     z-index: var(--z-tooltip);
 }
+
+.FlexboxCenterCenter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.not-margin {
+    margin: 0 !important
+}
+
+.not-padding {
+    padding: 0 !important
+}
+
+.w100 {
+    width: 100% !important
+}

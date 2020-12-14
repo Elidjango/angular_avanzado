@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <h4 class="card-title">Progress Bar</h4>
+                <div class="progress mrb-1">
+                    <div class="determinate" [ngStyle]="{width: progress + '%'}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s6">
+        <div class="card">
+            <div class="card-content">
+                <div class="row FlexboxCenterCenter" style="padding: 0 1rem;">
+                    <div class="col s3 not-padding">
+                        <button (click)="minusProgress()" class="btn waves-effect waves-light w100">
+                            <span class="fa fa-minus"></span>
+                        </button>
+                    </div>
+                    <div class="col s6">
+                        <div class="file-field input-field">
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate not-margin" type="text" [value]="progress + '%'" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s3 not-padding">
+                        <button (click)="plusProgress()" class="btn waves-effect waves-light w100">
+                            <span class="fa fa-plus"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
