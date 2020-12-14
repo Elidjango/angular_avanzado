@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from "./app-routing.module";
 
 // - E404 / E500
-import { E404Component } from './pages/e404/e404.component';
+import { E404Component } from './errors/e404/e404.component';
 
 // - M_authenticated
 import { AuthModule } from "./auth/auth.module";

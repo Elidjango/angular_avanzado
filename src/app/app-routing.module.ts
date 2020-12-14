@@ -1,52 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from "@angular/router";
 
-// - Authentication
-import { LoginComponent } from './auth/login/login.component';
-import { RecoveryPasswordComponent } from './auth/recovery-password/recovery-password.component';
-import { RegisterComponent } from './auth/register/register.component';
+// - Errors
+import { E404Component } from './errors/e404/e404.component';
 
-// - Router First
-import { LayoutComponent } from './pages/layout.component';
-import { E404Component } from './pages/e404/e404.component';
-
-// - Router Children
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
+// - Module Routings
+import { AuthRoutingModule } from './auth/auth.routing';
+import { LayoutRoutingModule } from './pages/layout.routing';
 
 const routes: Routes = [
-  {
-    path: "",
-    component: LayoutComponent,
-    children: [
-      {
-        path: "dashboard",
-        component: DashboardComponent
-      },
-      {path: "", pathMatch: "full", redirectTo: "/dashboard"}
-    ]
-  },
-  {
-    path: "signin",
-    component: LoginComponent
-  },
-  {
-    path: "signup",
-    component: RegisterComponent
-  },
-  {
-    path: "recovery-password",
-    component: RecoveryPasswordComponent
-  },
-  {
-    path: "**",
-    component: E404Component
-  }
+  {path: "**", component: E404Component}
 ];
 
 @NgModule({
   declarations: [],
   imports: [
-    RouterModule.forRoot(routes, {useHash: true})
+    RouterModule.forRoot(routes, {useHash: true}),
+    AuthRoutingModule,
+    LayoutRoutingModule
   ],
   exports: [
     RouterModule
