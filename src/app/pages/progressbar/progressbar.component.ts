@@ -7,21 +7,6 @@ import { Component } from '@angular/core';
   ]
 })
 export class ProgressbarComponent {
-  progress: number = 0;
-
-  minusProgress() {
-    if (this.progress === 0) {
-      return false;
-    } else {
-      this.progress--;
-    }
-  }
-
-  plusProgress() {
-    if (this.progress === 100) {
-      return false;
-    } else {
-      this.progress++;
-    }
-  }
+  progress1: number = 15;
+  progress2: number = 45;
 }

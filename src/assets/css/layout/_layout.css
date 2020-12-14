@@ -44,6 +44,10 @@ ul.side-nav.leftside-navigation li.user-details {
     justify-content: space-between;
 }
 
+.black {
+    background-color: var(--dark-color) !important;
+}
+
 .not-margin {
     margin: 0 !important
 }

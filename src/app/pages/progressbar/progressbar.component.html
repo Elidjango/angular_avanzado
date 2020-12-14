@@ -3,8 +3,11 @@
         <div class="card">
             <div class="card-content">
                 <h4 class="card-title">Progress Bar</h4>
-                <div class="progress mrb-1">
-                    <div class="determinate" [ngStyle]="{width: progress + '%'}"></div>
+                <div class="progress mrb-1" [style.height]="10 + 'px'" [style.background]="'rgba(0,0,0,.15)'">
+                    <div class="determinate blue" [ngStyle]="{width: progress1 + '%'}"></div>
+                </div>
+                <div class="progress mrb-1" [style.height]="10 + 'px'" [style.background]="'rgba(0,0,0,.15)'">
+                    <div class="determinate purple" [ngStyle]="{width: progress2 + '%'}"></div>
                 </div>
             </div>
         </div>
@@ -15,25 +18,14 @@
     <div class="col s6">
         <div class="card">
             <div class="card-content">
-                <div class="row FlexboxCenterCenter" style="padding: 0 1rem;">
-                    <div class="col s3 not-padding">
-                        <button (click)="minusProgress()" class="btn waves-effect waves-light w100">
-                            <span class="fa fa-minus"></span>
-                        </button>
-                    </div>
-                    <div class="col s6">
-                        <div class="file-field input-field">
-                            <div class="file-path-wrapper">
-                                <input class="file-path validate not-margin" type="text" [value]="progress + '%'" disabled>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s3 not-padding">
-                        <button (click)="plusProgress()" class="btn waves-effect waves-light w100">
-                            <span class="fa fa-plus"></span>
-                        </button>
-                    </div>
-                </div>
+                <app-incremented (valueOut)="progress1 = $event" [value]="progress1" [btnClass]="'blue'"></app-incremented>
+            </div>
+        </div>
+    </div>
+    <div class="col s6">
+        <div class="card">
+            <div class="card-content">
+                <app-incremented (valueOut)="progress2 = $event" [value]="progress2" [btnClass]="'purple'"></app-incremented>
             </div>
         </div>
     </div>

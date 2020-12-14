@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="card-content">
+        <h5 class="card-title">{{ title }}</h5>
+
+        <canvas *ngIf="doughnutChartData.length" baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" chartType="doughnut">
+        </canvas>
+
+        <div *ngIf="!doughnutChartData?.length" id="card-alert" class="card light-blue lighten-5">
+            <div class="card-content light-blue-text">
+                <p>Not data...</p>
+            </div>
+        </div>
+    </div>
+</div>

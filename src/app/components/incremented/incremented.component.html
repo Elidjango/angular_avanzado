@@ -1,0 +1,19 @@
+<div class="row FlexboxCenterCenter" style="padding: 0 1rem;">
+    <div class="col s3 not-padding">
+        <button (click)="minusProgress()" class="btn waves-effect waves-light w100" [ngClass]="btnClass">
+            <span class="fa fa-minus"></span>
+        </button>
+    </div>
+    <div class="col s6">
+        <div class="file-field input-field">
+            <div class="file-path-wrapper">
+                <input class="file-path validate not-margin" min="0" max="100" type="number" (ngModelChange)="onChange($event)" [(ngModel)]="progress">
+            </div>
+        </div>
+    </div>
+    <div class="col s3 not-padding">
+        <button (click)="plusProgress()" class="btn waves-effect waves-light w100" [ngClass]="btnClass">
+            <span class="fa fa-plus"></span>
+        </button>
+    </div>
+</div>

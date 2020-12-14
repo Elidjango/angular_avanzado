@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { LayoutComponent } from './layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressbarComponent } from './progressbar/progressbar.component';
+import { ChartsComponent } from './charts/charts.component';
 
 const routes: Routes = [
     {
@@ -12,7 +13,8 @@ const routes: Routes = [
         component: LayoutComponent,
         children: [
             {path: "", component: DashboardComponent},
-            {path: "progressbar", component: ProgressbarComponent}
+            {path: "progressbar", component: ProgressbarComponent},
+            {path: "charts", component: ChartsComponent}
         ]
     },
 ];
