@@ -1,6 +1,6 @@
 <div id="login-page" class="row">
     <div class="col s12 z-depth-4 card-panel">
-        <form class="login-form">
+        <form class="login-form" (submit)="signin()">
             <div class="row">
                 <div class="input-field col s12 center">
                     <img src="./assets/images/login-logo.png" alt="" class="circle responsive-img valign profile-image-login">
@@ -29,7 +29,7 @@
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <a href="index.html" class="btn waves-effect waves-light col s12">Login</a>
+                    <button type="submit" class="btn waves-effect waves-light col s12">Login</button>
                 </div>
             </div>
             <div class="row">

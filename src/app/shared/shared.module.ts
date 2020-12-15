@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from "@angular/router";
 
 // - C_shared
 import { HeaderComponent } from './header/header.component';
@@ -23,6 +24,6 @@ import { FooterComponent } from './footer/footer.component';
     BreadcrumbsComponent,
     FooterComponent,
   ],
-  imports: [ CommonModule ]
+  imports: [ CommonModule, RouterModule ]
 })
 export class SharedModule { }

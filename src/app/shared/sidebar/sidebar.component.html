@@ -26,14 +26,24 @@
                 </div>
             </div>
         </li>
-        <li class="bold">
-            <a href="#" class="waves-effect waves-black"><i class="mdi-action-dashboard"></i> Dashboard</a>
-        </li>
-        <li class="bold">
-            <a href="#" class="waves-effect waves-black"><i class="mdi-device-now-widgets"></i> Progressbar</a>
-        </li>
-        <li class="bold">
-            <a href="#" class="waves-effect waves-black"><i class="mdi-editor-insert-chart"></i> Charts</a>
+        <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+                <li class="bold" *ngFor="let op of menu; let i = index">
+                    <a *ngIf="!op.subnav?.length" [routerLink]="'/dashboard' + op.url" class="waves-effect waves-cyan">
+                        <i [ngClass]="op.icon"></i> {{ op.title }}
+                    </a>
+                    <a *ngIf="op.subnav.length" class="waves-effect waves-cyan collapsible-header">
+                        <i [ngClass]="op.icon"></i> {{ op.title }} <span class="new badge">{{ op.subnav.length }}</span>
+                    </a>
+                    <div *ngIf="op.subnav.length" class="collapsible-body">
+                        <ul>
+                            <li *ngFor="let sop of op.subnav; let si = index">
+                                <a [routerLink]="'/dashboard' + sop.url">{{ sop.title }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </li>
     </ul>
     <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only black"><i class="mdi-navigation-menu"></i></a>
